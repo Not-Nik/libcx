@@ -28,12 +28,12 @@ void exception_handler(int err) {
 
 int_ex error_function() {
     ERR(int_ex, 0);
-    return OK(int_ex, 2);
+    OK(int_ex, 2) // Not executed
 }
 
 int main() {
     set_handle(exception_handler);
-    int i = FIN(error_function());
+    int i = FIN(error_function())
 }
 ```
 
